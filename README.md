@@ -26,12 +26,6 @@ brew tap
 1. Ensure security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )
 2. The install may be very slow with MacOS Catalina
 
-# Uninstall
-```bash
-brew uninstall slatekit
-brew untap slatekit/slatekit
-```
-
 # Create
 ```bash
   slatekit new app -name="MyApp1" -package="company1.apps"
@@ -43,3 +37,8 @@ brew untap slatekit/slatekit
   slatekit new orm -name="MyApp3" -package="company1.data"
 ```
 
+# Uninstall
+```bash
+brew uninstall slatekit
+brew untap slatekit/slatekit
+```
