@@ -12,6 +12,7 @@ Tools|https://www.slatekit.com/start/generators/| Set up Generator tool
 Source|https://github.com/code-helix/slatekit | Git Page for project
 
 # Install
+This is WIP ( work in progress ) and should be available very soon!
 ```bash
 # WIP: This is just a test
 brew tap slatekit/slatekit
