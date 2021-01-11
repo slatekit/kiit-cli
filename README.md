@@ -18,14 +18,11 @@ This is WIP ( work in progress ) and should be available very soon!
 brew tap slatekit/slatekit
 brew install slatekit
 ```
-# Check
-```bash
-brew tap 
-```
 
 # Notes
 1. Ensure security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )
-2. The install may be very slow with MacOS Catalina
+2. [The install may be very slow with MacOS Catalina](https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423)
+
 
 # Create
 ```bash
@@ -36,6 +33,12 @@ brew tap
   slatekit new job -name="MyJob1" -package="company1.jobs"
   slatekit new lib -name="MyLib1" -package="company1.libs"
   slatekit new orm -name="MyApp3" -package="company1.data"
+```
+
+# Check
+```bash
+brew tap 
+brew info slatekit
 ```
 
 # Uninstall
