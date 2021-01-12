@@ -21,7 +21,8 @@ brew install slatekit
 
 # Notes
 1. Ensure security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )
-2. [The install may be very slow with MacOS Catalina](https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423)
+2. [Slow HomeBrew post install](https://discussions.apple.com/thread/251258165)
+3. [The install may be very slow with MacOS Catalina](https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423)
 
 
 # Create
