@@ -47,3 +47,25 @@ brew info slatekit
 brew uninstall slatekit
 brew untap slatekit/slatekit
 ```
+
+# Publish
+Steps to publish this CLI to make it available via HomeBrew
+Notes: These binaries are built at github.com/slatekit/slatekit
+
+## Build Slate Kit
+You have to build Slate Kit first
+1. ensure env variable is set to `export SLATEKIT_PROJECT_MODE=binary`
+2. checkout git repo for Slate Kit at https://github.com/slatekit/slatekit ( e.g. `~/git/slatekit/slatekit` )
+3. cd into the https://github.com/slatekit/slatekit/src/lib/kotlin/slatekit directory
+4. run `gradle clean build distZip`
+
+## Package CLI
+Once Slate Kit is built, there are script to package the binaries and update the HomeBrew formula
+1. checkout this repo https://github.com/slatekit/slatekit-cli ( e.g. to `~/git/slatekit/slatekit-cli` )
+2. on terminal move to build folder of slate kit `cd ~/git/slatekit/slatekit/build`
+3. open `slatekit-package-cli.sh` and ensure you set the root directory variables
+4. on terminal run the script `./slatekit-package-cli` ( this will copy all needed files into the slatekit-cli project )
+5. commit the changes
+6. create a release in github.com
+2. run bash script `./slatekit-package-cli` on command line 
+3. 
