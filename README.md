@@ -51,21 +51,37 @@ brew untap slatekit/slatekit
 # Publish
 Steps to publish this CLI to make it available via HomeBrew
 Notes: These binaries are built at github.com/slatekit/slatekit
+Much of this can be automated ( WIP - work in progress ) 
 
 ## Build Slate Kit
 You have to build Slate Kit first
-1. ensure env variable is set to `export SLATEKIT_PROJECT_MODE=binary`
+1. ensure env variable is set to `export SLATEKIT_PROJECT_MODE=sources` ( in mac .bashrc or .zshrc )
 2. checkout git repo for Slate Kit at https://github.com/slatekit/slatekit ( e.g. `~/git/slatekit/slatekit` )
 3. cd into the https://github.com/slatekit/slatekit/src/lib/kotlin/slatekit directory
-4. run `gradle clean build distZip`
+4. open `~/git/slatekit/slatekit/src/lib/kotlin/slatekit/src/main/resources/env.conf`
+5. change the version numbers to the version of slate kit for **slatekit.version, slatekit.version.cli** e.g. ( 2.1.3 )
+6. run `gradle clean build distZip` ( to build the binaries )
+7. go to `~/git/slatekit/slatekit/src/lib/kotlin/slatekit/build/distributions`
+8. unzip the zip file `slatekit.zip` to directory `slatekit`
 
 ## Package CLI
-Once Slate Kit is built, there are script to package the binaries and update the HomeBrew formula
+Once Slate Kit is built, there is a script to package the binaries and update the HomeBrew formula
 1. checkout this repo https://github.com/slatekit/slatekit-cli ( e.g. to `~/git/slatekit/slatekit-cli` )
 2. on terminal move to build folder of slate kit `cd ~/git/slatekit/slatekit/build`
 3. open `slatekit-package-cli.sh` and ensure you set the root directory variables
 4. on terminal run the script `./slatekit-package-cli` ( this will copy all needed files into the slatekit-cli project )
 5. commit the changes
-6. create a release in github.com
-2. run bash script `./slatekit-package-cli` on command line 
-3. 
+6. create a release in github.com see https://github.com/slatekit/slatekit-cli/releases ( use version label format **v2.1.3** )
+
+## Homebrew
+Now that there is a relase of the CLI, we can package the HomeBrew formula
+1. checkout repo https://github.com/slatekit/homebrew-slatekit ( `~/git/slatekit/homebrew-slatekit` )
+2. open the release ( e.g. https://github.com/slatekit/slatekit-cli/releases/tag/v2.1.3 )
+3. right click on the zip file and get the link to it ( e.g. `Source code(tar.gz)` )
+4. on terminal go to a temp directory ( e.g. `~/git/slatekit/tmp` )
+5. download the url via curl ( e.g. `curl -L https://github.com/slatekit/slatekit-cli/archive/v2.1.3.tar.gz > v2.1.3.tar.gz` )
+6. get the sha of the file run `shasum -a 256 v2.1.3.tar.gz` ( e.g. `01dfe9a24293ea82503d89142bf3ce9514932370bdacc425de6c90e50b43aa31` )
+7. open file `slatekit.rb` in this homebrew-slatekit repo
+8. change the version **url and sha256** fields in the file to reflect the version and shasum above
+9. commit the changes
+
