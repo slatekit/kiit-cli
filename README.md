@@ -70,7 +70,7 @@ Once Slate Kit is built, there is a script to package the binaries and update th
 2. on terminal move to build folder of slate kit `cd ~/git/slatekit/slatekit/build`
 3. open `slatekit-package-cli.sh` and ensure you set the root directory variables
 4. on terminal run the script `./slatekit-package-cli` ( this will copy all needed files into the slatekit-cli project )
-5. commit the changes
+5. commit the changes to slatekit-cli ( should have the env.conf and slate kit binaries/jars )
 6. create a release in github.com see https://github.com/slatekit/slatekit-cli/releases ( use version label format **v2.1.3** )
 
 ## Homebrew
