@@ -18,7 +18,7 @@
 
 ##############################################################################
 ##
-##  slatekit start up script for UN*X
+##  kiit start up script for UN*X
 ##
 ##############################################################################
 
@@ -40,10 +40,10 @@ cd "`dirname \"$PRG\"`/.." >/dev/null
 APP_HOME="`pwd -P`"
 cd "$SAVED" >/dev/null
 
-APP_NAME="slatekit"
+APP_NAME="kiit"
 APP_BASE_NAME=`basename "$0"`
 
-# Add default JVM options here. You can also use JAVA_OPTS and SLATEKIT_OPTS to pass JVM options to this script.
+# Add default JVM options here. You can also use JAVA_OPTS and KIIT_OPTS to pass JVM options to this script.
 DEFAULT_JVM_OPTS=""
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
@@ -80,7 +80,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/slatekit.jar:$APP_HOME/lib/slatekit-app.jar:$APP_HOME/lib/slatekit-generator.jar:$APP_HOME/lib/slatekit-connectors-cli.jar:$APP_HOME/lib/slatekit-apis.jar:$APP_HOME/lib/slatekit-cli.jar:$APP_HOME/lib/slatekit-context.jar:$APP_HOME/lib/slatekit-serialization.jar:$APP_HOME/lib/slatekit-meta.jar:$APP_HOME/lib/slatekit-providers-logback.jar:$APP_HOME/lib/kotlin-reflect-1.3.72.jar:$APP_HOME/lib/slatekit-policy.jar:$APP_HOME/lib/slatekit-tracking.jar:$APP_HOME/lib/slatekit-common.jar:$APP_HOME/lib/slatekit-result.jar:$APP_HOME/lib/kotlin-stdlib-jdk8-1.3.72.jar:$APP_HOME/lib/kotlinx-coroutines-core-1.1.0.jar:$APP_HOME/lib/kotlin-stdlib-jdk7-1.3.72.jar:$APP_HOME/lib/kotlin-stdlib-1.3.72.jar:$APP_HOME/lib/threetenbp-1.3.8.jar:$APP_HOME/lib/kotlinx-coroutines-core-common-1.1.0.jar:$APP_HOME/lib/kotlin-stdlib-common-1.3.72.jar:$APP_HOME/lib/annotations-13.0.jar:$APP_HOME/lib/okhttp-3.9.0.jar:$APP_HOME/lib/json-simple-1.1.jar:$APP_HOME/lib/logback-ext-loggly-0.1.5.jar:$APP_HOME/lib/logback-classic-1.2.3.jar:$APP_HOME/lib/logback-core-1.2.3.jar:$APP_HOME/lib/okio-1.13.0.jar:$APP_HOME/lib/slf4j-api-1.7.25.jar
+CLASSPATH=$APP_HOME/lib/kiit.jar:$APP_HOME/lib/slatekit-app.jar:$APP_HOME/lib/slatekit-generator.jar:$APP_HOME/lib/slatekit-connectors-cli.jar:$APP_HOME/lib/slatekit-server.jar:$APP_HOME/lib/slatekit-apis.jar:$APP_HOME/lib/slatekit-cli.jar:$APP_HOME/lib/slatekit-context.jar:$APP_HOME/lib/slatekit-serialization.jar:$APP_HOME/lib/slatekit-meta.jar:$APP_HOME/lib/slatekit-providers-logback.jar:$APP_HOME/lib/slatekit-providers-kafka.jar:$APP_HOME/lib/ktor-metrics-jvm-1.6.8.jar:$APP_HOME/lib/ktor-server-netty-jvm-1.6.8.jar:$APP_HOME/lib/ktor-server-host-common-jvm-1.6.8.jar:$APP_HOME/lib/ktor-server-core-jvm-1.6.8.jar:$APP_HOME/lib/kotlin-reflect-1.6.20.jar:$APP_HOME/lib/slatekit-policy.jar:$APP_HOME/lib/slatekit-telemetry.jar:$APP_HOME/lib/slatekit-core.jar:$APP_HOME/lib/slatekit-utils.jar:$APP_HOME/lib/slatekit-requests.jar:$APP_HOME/lib/slatekit-common.jar:$APP_HOME/lib/slatekit-result.jar:$APP_HOME/lib/kotlinx-coroutines-jdk8-1.5.2-native-mt.jar:$APP_HOME/lib/ktor-http-cio-jvm-1.6.8.jar:$APP_HOME/lib/ktor-http-jvm-1.6.8.jar:$APP_HOME/lib/ktor-network-jvm-1.6.8.jar:$APP_HOME/lib/ktor-utils-jvm-1.6.8.jar:$APP_HOME/lib/ktor-io-jvm-1.6.8.jar:$APP_HOME/lib/kotlinx-coroutines-core-jvm-1.5.2-native-mt.jar:$APP_HOME/lib/kotlin-stdlib-jdk8-1.6.20.jar:$APP_HOME/lib/kotlin-stdlib-jdk7-1.6.20.jar:$APP_HOME/lib/kotlin-stdlib-1.6.20.jar:$APP_HOME/lib/threetenbp-1.3.8.jar:$APP_HOME/lib/kotlin-stdlib-common-1.6.20.jar:$APP_HOME/lib/annotations-13.0.jar:$APP_HOME/lib/okhttp-3.9.0.jar:$APP_HOME/lib/json-simple-1.1.jar:$APP_HOME/lib/logback-ext-loggly-0.1.5.jar:$APP_HOME/lib/logback-classic-1.2.3.jar:$APP_HOME/lib/logback-core-1.2.3.jar:$APP_HOME/lib/kafka-clients-2.4.0.jar:$APP_HOME/lib/json-20201115.jar:$APP_HOME/lib/okio-1.13.0.jar:$APP_HOME/lib/metrics-jvm-4.2.4.jar:$APP_HOME/lib/metrics-core-4.2.4.jar:$APP_HOME/lib/slf4j-api-1.7.36.jar:$APP_HOME/lib/zstd-jni-1.4.3-1.jar:$APP_HOME/lib/lz4-java-1.6.0.jar:$APP_HOME/lib/snappy-java-1.1.7.3.jar:$APP_HOME/lib/netty-codec-http2-4.1.74.Final.jar:$APP_HOME/lib/alpn-api-1.1.3.v20160715.jar:$APP_HOME/lib/netty-transport-native-kqueue-4.1.74.Final.jar:$APP_HOME/lib/netty-transport-native-epoll-4.1.74.Final.jar:$APP_HOME/lib/netty-codec-http-4.1.74.Final.jar:$APP_HOME/lib/netty-handler-4.1.74.Final.jar:$APP_HOME/lib/netty-codec-4.1.74.Final.jar:$APP_HOME/lib/netty-transport-classes-kqueue-4.1.74.Final.jar:$APP_HOME/lib/netty-transport-classes-epoll-4.1.74.Final.jar:$APP_HOME/lib/netty-transport-native-unix-common-4.1.74.Final.jar:$APP_HOME/lib/netty-transport-4.1.74.Final.jar:$APP_HOME/lib/netty-buffer-4.1.74.Final.jar:$APP_HOME/lib/netty-resolver-4.1.74.Final.jar:$APP_HOME/lib/netty-common-4.1.74.Final.jar:$APP_HOME/lib/netty-tcnative-classes-2.0.48.Final.jar:$APP_HOME/lib/config-1.4.1.jar:$APP_HOME/lib/jansi-2.4.0.jar
 
 
 # Determine the Java command to use to start the JVM.
@@ -180,6 +180,6 @@ save () {
 APP_ARGS=`save "$@"`
 
 # Collect all arguments for the java command, following the shell quoting and substitution rules
-eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $SLATEKIT_OPTS -classpath "\"$CLASSPATH\"" slatekit.RunKt "$APP_ARGS"
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $KIIT_OPTS -classpath "\"$CLASSPATH\"" kiit.RunKt "$APP_ARGS"
 
 exec "$JAVACMD" "$@"
